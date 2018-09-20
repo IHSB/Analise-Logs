@@ -2,7 +2,7 @@
 Terceiro projeto do curso nanodegree da Udacity de Desenvolvedor Full-stack.
 Esta uma ferramenta de relatórios que imprime relatórios (em texto sem formatação) com base nos dados no banco de dados.
 
-(Veja o resultado gerado do programa)[https://raw.githubusercontent.com/giordanna/Analise-Logs/master/relatorio.txt]
+[Veja o resultado gerado do programa](https://raw.githubusercontent.com/giordanna/Analise-Logs/master/relatorio.txt)
 
 ### Como instalar
 - Este repositório é apenas o conteúdo que deverá ser inserido na pasta compartilhada do vagrant. Siga os passos [desta página](https://classroom.udacity.com/courses/ud197/lessons/3423258756/concepts/14c72fe3-e3fe-4959-9c4b-467cf5b7c3a0) para instalar a máquina virtual com as configurações utilizadas;
