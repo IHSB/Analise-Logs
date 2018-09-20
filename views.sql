@@ -11,7 +11,7 @@ select authors.name, count(articles.author) as views
 from log, articles, authors
 where log.status = '200 OK' and log.path like concat('%', articles.slug) and articles.author=authors.id
 group by articles.author, authors.name
-order by views;
+order by views desc;
 
 
 create view dias_com_mais_de_1_por_cento_de_erros as

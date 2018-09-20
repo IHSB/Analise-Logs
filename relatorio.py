@@ -51,7 +51,7 @@ def dias_com_mais_de_1_por_cento_de_erros():
 
     texto = "Quais dias têm mais de 1% das requisições com erros:\n"
     for i in dias:
-        texto += "%-35s -- %-10.3s erros\n" % (i[0], i[1])
+        texto += "%-35s -- %-10.4s%s erros\n" % (i[0], i[1], '%')
     texto += "\n\n"
     return texto
 

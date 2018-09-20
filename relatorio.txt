@@ -1,4 +1,4 @@
-Relatório de Análise de Log - Escrito: Thu Sep 20 22:37:24 2018
+Relatório de Análise de Log - Escrito: Thu Sep 20 22:43:36 2018
 
 Os três artigos mais populares de todos os tempos:
 Candidate is jerk, alleges rival    -- 338647     visualizações
@@ -7,13 +7,13 @@ Bad things gone, say good people    -- 170098     visualizações
 
 
 Os autores de artigos mais populares de todos os tempos:
-Markoff Chaney                      -- 84557      visualizações
-Anonymous Contributor               -- 170098     visualizações
-Rudolf von Treppenwitz              -- 423457     visualizações
 Ursula La Multa                     -- 507594     visualizações
+Rudolf von Treppenwitz              -- 423457     visualizações
+Anonymous Contributor               -- 170098     visualizações
+Markoff Chaney                      -- 84557      visualizações
 
 
 Quais dias têm mais de 1% das requisições com erros:
-Jul 17, 2016                        -- 2.3        erros
+Jul 17, 2016                        -- 2.31      % erros
 
 
