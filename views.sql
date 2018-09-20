@@ -3,7 +3,7 @@ select articles.title, count(log.path) as views
 from log, articles
 where log.status = '200 OK' and log.path like concat('%', articles.slug)
 group by log.path, articles.title
-order by views desc;
+order by views desc limit 3;
 
 
 create view autores_mais_populares as
@@ -11,7 +11,7 @@ select authors.name, count(articles.author) as views
 from log, articles, authors
 where log.status = '200 OK' and log.path like concat('%', articles.slug) and articles.author=authors.id
 group by articles.author, authors.name
-order by views desc limit 3;
+order by views;
 
 
 create view dias_com_mais_de_1_por_cento_de_erros as
