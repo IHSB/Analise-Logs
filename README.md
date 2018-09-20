@@ -12,7 +12,7 @@ Esta uma ferramenta de relatórios que imprime relatórios (em texto sem formata
 - Agora, clone ou baixe o conteúdo deste repositório no diretório compartilhado.
 
 ### Como criar as Views utilizadas
-Este projeto utiliza de views que foram criadas no banco de dados e são referenciadas no `relatório.py`. Para o programa funcionar corretamente, estas views devem ser criadas no banco de dados `news`.
+Este projeto utiliza de views que foram criadas no banco de dados e são referenciadas no `relatorio.py`. Para o programa funcionar corretamente, estas views devem ser criadas no banco de dados `news`.
 1) Para criar a view `artigos_mais_populares`:
 ```sql
 create view artigos_mais_populares as
