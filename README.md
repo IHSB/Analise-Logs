@@ -8,7 +8,7 @@ Esta uma ferramenta de relatórios que imprime relatórios (em texto sem formata
 - Este repositório é apenas o conteúdo que deverá ser inserido na pasta compartilhada do vagrant. Siga os passos [desta página](https://classroom.udacity.com/courses/ud197/lessons/3423258756/concepts/14c72fe3-e3fe-4959-9c4b-467cf5b7c3a0) para instalar a máquina virtual com as configurações utilizadas;
 - Em seguida, baixe o [banco de dados](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip);
 - Coloque na pasta vagrant, compartilhada com a máquina virtual;
-- Use o comando `psql -d news -f newsdata.sql` abaixo na máquina virtual dentro do diretório compartilhado:
+- Use o comando `psql -d news -f newsdata.sql` na máquina virtual dentro do diretório compartilhado:
 - Agora, clone ou baixe o conteúdo deste repositório no diretório compartilhado.
 
 ### Como criar as Views utilizadas
