@@ -8,16 +8,16 @@ import time
 
 
 DBNAME = "news"
+DB = None
 
 
 # consultado: https://stackoverflow.com/a/26005077
 def artigos_mais_populares():
     """Mostra os três artigos mais populares de todos os tempos."""
-    db = psycopg2.connect(database=DBNAME)
-    c = db.cursor()
+    global DB
+    c = DB.cursor()
     c.execute("select * from artigos_mais_populares")
     artigos = c.fetchall()
-    db.close()
 
     texto = "Os três artigos mais populares de todos os tempos:\n"
     for i in artigos:
@@ -28,11 +28,10 @@ def artigos_mais_populares():
 
 def autores_mais_populares():
     """Mostra os autores de artigos mais populares de todos os tempos."""
-    db = psycopg2.connect(database=DBNAME)
-    c = db.cursor()
+    global DB
+    c = DB.cursor()
     c.execute("select * from autores_mais_populares")
     autores = c.fetchall()
-    db.close()
 
     texto = "Os autores de artigos mais populares de todos os tempos:\n"
     for i in autores:
@@ -43,11 +42,10 @@ def autores_mais_populares():
 
 def dias_com_mais_de_1_por_cento_de_erros():
     """Mostra quais dias têm mais de 1% das requisições resultaram em erros."""
-    db = psycopg2.connect(database=DBNAME)
-    c = db.cursor()
+    global DB
+    c = DB.cursor()
     c.execute("select * from dias_com_mais_de_1_por_cento_de_erros")
     dias = c.fetchall()
-    db.close()
 
     texto = "Quais dias têm mais de 1% das requisições com erros:\n"
     for i in dias:
@@ -58,6 +56,12 @@ def dias_com_mais_de_1_por_cento_de_erros():
 
 def main():
     """Escreve no arquivo de texto o relatório."""
+    global DB
+    try:
+        DB = psycopg2.connect(database=DBNAME)
+    except psycopg2.Error:
+        print("Não foi possível conectar ao banco de dados")
+
     print("Escrevendo relatório...\n")
     relatorio = open("relatorio.txt", "w")
 
@@ -69,6 +73,8 @@ def main():
 
     relatorio.close()
     print("O relatório está pronto! Veja o arquivo relatorio.txt")
+
+    DB.close()
 
 
 if __name__ == "__main__":
